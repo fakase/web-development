@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Perusahaan Anda</title>
+    
+    <!-- Google Fonts Premium -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
 
+    <!-- Hubungkan CSS Utama + CSS Khusus Tentang -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Tentang.css">
+</head>
+<body class="fade-in-page">
+
+    <!-- Efek Ambient Glow Background -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Menu Navigasi Utama -->
+    <nav class="navbar">
+        <a href="beranda.html">Beranda</a>
+        <a href="tentang.html" class="active">Tentang</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <!-- Header / Hero Tentang Kami -->
+    <header class="about-hero">
+        <p class="hero-subtitle">Mengenal Lebih Dekat</p>
+        <h1 class="hero-title">Visi Kreatif di Balik<br>Pengalaman Digital</h1>
+        <p class="hero-description">Kami adalah tim yang berdedikasi untuk menciptakan solusi web modern, menggabungkan estetika visual kelas atas dengan performa tinggi.</p>
+    </header>
+
+    <!-- Konten Utama Halaman Tentang -->
+    <main class="about-container">
+        
+        <!-- Seksi Cerita / Misi -->
+        <section class="about-story-card">
+            <h2>Misi Kami</h2>
+            <p>Berdiri sejak tahun 2026, fokus kami adalah membantu brand dan individu menghadirkan identitas digital yang berkelas. Kami percaya bahwa desain yang baik bukan hanya tentang tampilan visual, tetapi juga tentang bagaimana memberikan pengalaman pengguna yang intuitif dan berkesan.</p>
+        </section>
+
+        <!-- Statisik / Pencapaian -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>99%</h3>
+                <p>Kepuasan Klien</p>
+            </div>
+            <div class="stat-card">
+                <h3>50+</h3>
+                <p>Proyek Selesai</p>
+            </div>
+            <div class="stat-card">
+                <h3>24/7</h3>
+                <p>Dukungan Khusus</p>
+            </div>
+        </section>
+
+        <!-- Nilai-Nilai Utama -->
+        <section class="values-section">
+            <h2 class="section-title">Nilai Utama Kami</h2>
+            <div class="values-grid">
+                <div class="value-box">
+                    <div class="icon">💡</div>
+                    <h3>Inovasi Tanpa Batas</h3>
+                    <p>Selalu menerapkan teknologi dan tren desain terbaru untuk hasil yang segar dan relevan.</p>
+                </div>
+                <div class="value-box">
+                    <div class="icon">🎯</div>
+                    <h3>Presisi Tinggi</h3>
+                    <p>Memperhatikan setiap detail kecil dari tata letak, tipografi, hingga transisi animasi.</p>
+                </div>
+                <div class="value-box">
+                    <div class="icon">🤝</div>
+                    <h3>Kolaboratif</h3>
+                    <p>Bekerja sama secara erat untuk memastikan hasil akhir sesuai dengan visi Anda.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Perusahaan Anda. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- Script Navbar Scroll Sembunyi / Muncul -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop && scrollTop > 80) {
+                navbar.classList.add('navbar-hidden');
+            } else {
+                navbar.classList.remove('navbar-hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+
+</body>
+</html>
