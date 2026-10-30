@@ -1,1 +1,69 @@
-
+body{
+	font-family: Arial, sans-serif;
+	background-color: var(--warna-utama);
+	color: var(--warna-teks);
+	margin: 0;
+	padding: 20px;
+}
+@media (max-width: 768px) {
+.container {
+grid-template-columns: 1fr;
+}
+ }
+.selamat{
+	text-align: center;
+	color:white;
+}
+.selamat:hover{
+		transform: scale 3px
+}
+:root{
+	--warna-utama: rgb(12, 67, 218);
+	--warna-teks: white;
+	--jarak: 20px;
+	--warna-box: #aca54b;
+}
+button{
+	padding:14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	background: black;
+	border-radius:10px;
+	color: white;
+}
+.card1{
+	padding: 20px;
+	border: 2px ;
+	margin: 10px;
+	background: #8c9944;
+	border-radius:16px;
+	box-shadow: 0 4px 15px #00000020;
+}
+.card2{
+	padding: 20px;
+	border: 2px ;
+	margin: 10px;
+	background: #8c8888;
+	border-radius:16px;
+	box-shadow: 0 4px 15px #00000020;
+}
+.card3{
+	padding: 20px;
+	border: 2px ;
+	margin: 10px;
+	background: #8c8888;
+	border-radius:16px;
+	box-shadow: 0 4px 15px #00000020;
+}
+button:active{
+	background-color: #404040;
+	border-color: #404040;
+	outline: 2px #404040;
+}
+hr{
+	background-color: #000000;
+	border:0;
+	height: 2px;
+}
