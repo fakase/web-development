@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Isi Konten</title>
+    
+    <!-- Google Fonts Premium -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
 
+    <!-- Hubungkan CSS Dasar + CSS Khusus Beranda -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="beranda.css">
+</head>
+<body class="fade-in-page">
+
+    <!-- Efek Ambient Glow Background Tetap Ada -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Menu Navigasi Utama (Floating & Hide-on-Scroll) -->
+    <nav class="navbar">
+        <a href="beranda.html" class="active">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <!-- Content Bagian Atas (Hero Section) -->
+    <header class="hero-section">
+        <p class="hero-subtitle">Selamat Datang Di Ruang Digital</p>
+        <h2 class="hero-title">Keanggunan Klasik,<br>Fungsionalitas Modern</h2>
+        <p class="hero-description">Kami menciptakan ruang digital yang rapi, mewah, dan responsif untuk memberikan impresi terbaik kepada pengunjung Anda.</p>
+        <div class="hero-buttons">
+            <button class="cta-primary-btn">Mulai Penjelajahan</button>
+            <button class="cta-secondary-btn">Pelajari Lebih Lanjut</button>
+        </div>
+    </header>
+
+    <!-- Grid Fitur / Isi Halaman Utama -->
+    <main class="services-container">
+        <div class="service-box">
+            <div class="icon">✨</div>
+            <h3>Desain Rapi</h3>
+            <p>Layout proporsional dengan grid presisi tinggi guna memastikan kenyamanan visual maksimal.</p>
+        </div>
+        <div class="service-box">
+            <div class="icon">🎨</div>
+            <h3>Gradasi Premium</h3>
+            <p>Perpaduan warna gelap ambient dan glassmorphism transparan yang elegan.</p>
+        </div>
+        <div class="service-box">
+            <div class="icon">🚀</div>
+            <h3>Animasi Hidup</h3>
+            <p>Interaksi elemen yang fluid dan transisi halus demi memanjakan mata pengguna.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Perusahaan Anda. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- Script Navbar Scroll Sembunyi / Muncul -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop && scrollTop > 80) {
+                // Scroll ke bawah -> Sembunyikan navbar
+                navbar.classList.add('navbar-hidden');
+            } else {
+                // Scroll ke atas -> Tampilkan navbar
+                navbar.classList.remove('navbar-hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+
+</body>
+</html>
