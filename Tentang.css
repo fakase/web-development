@@ -1,1 +1,250 @@
+/* ==========================================
+   STYLE KHUSUS KONTEN TENTANG (Tentang.html)
+   ========================================== */
 
+/* Efek Transisi Masuk Halaman */
+.fade-in-page {
+    animation: fadeInPageSmooth 0.8s ease-out forwards;
+}
+
+@keyframes fadeInPageSmooth {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navbar Glassmorphism Floating & Fixed */
+.navbar {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    
+    display: flex;
+    gap: 35px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px 45px;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease;
+}
+
+.navbar-hidden {
+    transform: translate(-50%, -120%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navbar a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 6px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #ffffff;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #00b4d8, #7928ca);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar a:hover::after, .navbar a.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Hero Section Tentang */
+.about-hero {
+    max-width: 800px;
+    text-align: center;
+    margin-top: 140px;
+    padding: 0 20px;
+    animation: fadeInUpSmooth 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ff007f;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+/* Main Container */
+.about-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    animation: fadeInUpSmooth 1.2s ease-out;
+}
+
+/* Card Misi / Cerita */
+.about-story-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.about-story-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.about-story-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #94a3b8;
+}
+
+/* Statistik Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #00b4d8, #7928ca);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    letter-spacing: 1px;
+}
+
+/* Nilai-Nilai Utama */
+.values-section {
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 35px 25px;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.value-box:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 0, 127, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.value-box .icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.value-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.value-box p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+@keyframes fadeInUpSmooth {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsif Mobile Screen */
+@media screen and (max-width: 768px) {
+    .navbar { width: 90%; gap: 15px; padding: 12px 20px; justify-content: center; }
+    .about-hero { margin-top: 110px; }
+    .hero-title { font-size: 2.1rem; }
+    .stats-grid, .values-grid { grid-template-columns: 1fr; }
+    .about-story-card { padding: 25px 20px; }
+}
