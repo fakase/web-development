@@ -202,3 +202,33 @@
     .services-container { grid-template-columns: 1fr; margin: 40px 0; }
     .service-box { text-align: center; }
 }
+
+.brand-logo {
+    position: fixed;
+    top: 32px; /* Menyesuaikan ketinggian kapsul navbar */
+    left: 40px; /* Jarak pas dari tepi kiri layar komputer */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.brand-logo img {
+    height: 30px; /* Ukuran tinggi logo ideal agar tidak merusak layout */
+    width: auto;
+}
+
+/* Menyembunyikan logo di layar hp jika dirasa terlalu sempit */
+@media screen and (max-width: 768px) {
+    .brand-logo {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        /* Atau bisa juga disembunyikan menggunakan display: none; jika ingin fokus ke menu saja */
+    }
+}
