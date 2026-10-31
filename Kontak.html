@@ -81,6 +81,24 @@
         <p>© 2026 Perusahaan Anda. Hak Cipta Dilindungi.</p>
     </footer>
 
+        <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Jika discroll ke bawah lebih dari 50px, sembunyikan navbar
+            if (scrollTop > lastScrollTop && scrollTop > 50) {
+                navbar.classList.add('navbar-hidden');
+            } else {
+                // Jika discroll ke atas, munculkan kembali
+                navbar.classList.remove('navbar-hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+
+
 </body>
 </html>
-
