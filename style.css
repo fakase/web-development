@@ -87,7 +87,9 @@ h1 {
     font-size: 3.5rem;
     letter-spacing: 3px;
     background: linear-gradient(to right, #ffffff, #cbd5e1, #ffffff);
+    /* PERBAIKAN: Mengganti garis bawah (_) dengan tanda hubung (-) */
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
     animation: fadeInDown 1.2s ease-out;
