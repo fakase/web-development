@@ -25,11 +25,11 @@
     </div>
 
     <!-- Menu Navigasi Utama (Floating & Hide-on-Scroll) -->
-    <nav class="navbar">
-        <a href="beranda.html" class="active">Beranda</a>
-        <a href="tentang.html">Tentang</a>
-        <a href="kontak.html">Kontak</a>
-    </nav>
+   <nav class="navbar">
+    <a href="#" id="menu-beranda" class="active">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+</nav>
 
     <!-- Content Bagian Atas (Hero Section) -->
     <header class="hero-section">
@@ -84,6 +84,25 @@
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
     </script>
+
+    <script>
+    const menuBeranda = document.getElementById('menu-beranda');
+
+    // 1. Deteksi Klik 2 Kali (Kembali ke Halaman Awal)
+    menuBeranda.addEventListener('dblclick', function(e) {
+        e.preventDefault();
+        // Ganti 'index.html' dengan nama file halaman Selamat Datang kamu
+        window.location.href = 'index.html'; 
+    });
+
+    // 2. Deteksi Klik 1 Kali (Agar tetap berfungsi normal tanpa reload)
+    menuBeranda.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Opsional: Membuat halaman otomatis scroll halus ke atas saat diklik 1x
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
 
 </body>
 </html>
