@@ -1,1 +1,271 @@
+/* ==========================================
+   STYLE KHUSUS HALAMAN KONTAK (kontak.css)
+   ========================================== */
+
+/* Efek Transisi Masuk Halaman */
+.fade-in-page {
+    animation: fadeInPageSmooth 0.8s ease-out forwards;
+}
+
+@keyframes fadeInPageSmooth {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navbar Glassmorphism Floating & Fixed (Berbagi Style dari Halaman Tentang) */
+.navbar {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    
+    display: flex;
+    gap: 35px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px 45px;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease;
+}
+
+.navbar a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 6px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #ffffff;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #00b4d8, #7928ca);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar a:hover::after, .navbar a.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Hero Section Kontak */
+.contact-hero {
+    max-width: 800px;
+    text-align: center;
+    margin-top: 140px;
+    padding: 0 20px;
+    animation: contactFadeUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ff007f;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+/* Wrapper Utama Area Konten */
+.contact-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    animation: contactFadeUp 1.2s ease-out;
+}
+
+/* Info Grid Section */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 180, 216, 0.3);
+}
+
+.info-card .icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.info-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+/* Formulir Card Glassmorphism */
+.contact-form-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 50px 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.interactive-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Floating Input Group */
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group label {
+    position: absolute;
+    left: 18px;
+    top: 14px;
+    color: #64748b;
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Logika Animasi Label Mengapung */
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+    top: -22px;
+    left: 4px;
+    font-size: 0.82rem;
+    color: #00b4d8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00b4d8;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.2);
+}
+
+/* Tombol Kirim Bersinar */
+.submit-btn {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00b4d8, #7928ca);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.2);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(121, 40, 202, 0.4), 0 0 10px rgba(0, 180, 216, 0.3);
+    filter: brightness(1.1);
+}
+
+/* Animasi Masuk */
+@keyframes contactFadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsif Mobile Screen */
+@media screen and (max-width: 768px) {
+    .navbar { width: 90%; gap: 15px; padding: 12px 20px; justify-content: center; }
+    .contact-hero { margin-top: 110px; }
+    .hero-title { font-size: 2.1rem; }
+    .contact-info-grid { grid-template-columns: 1fr; }
+    .contact-form-card { padding: 30px 20px; }
+}
 
